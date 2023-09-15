@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'pages/login_page.dart';
 
@@ -9,9 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Material App',
-      home: LoginPage(),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      builder: (context, child) => const MaterialApp(
+        title: 'Material App',
+        home: LoginPage(),
+      ),
     );
   }
 }
