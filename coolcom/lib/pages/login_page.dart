@@ -19,80 +19,88 @@ class LoginPage extends StatelessWidget {
           children: [
             const _AppBarSection(),
             const _logoSection(),
+            _emailAndPasswordSection(),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Email:",
-                  style:
-                      TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700),
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "example@gmail.com",
-                    fillColor: ColorIs.almostWhite,
-                    filled: true,
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 26.0, horizontal: 18.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.r),
-                      borderSide:
-                          const BorderSide(color: Colors.transparent, width: 0),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.r),
-                      borderSide:
-                          const BorderSide(color: Colors.transparent, width: 0),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      gapPadding: 0.0,
-                      borderRadius: BorderRadius.circular(8.r),
-                      borderSide:
-                          const BorderSide(color: Colors.transparent, width: 0),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 24.h,
-                ),
-                Text(
-                  "Password:",
-                  style:
-                      TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700),
-                ),
-                TextField(
-                  obscureText: true,
-                  obscuringCharacter: "*",
-                  decoration: InputDecoration(
-                    hintText: "********",
-                    fillColor: ColorIs.almostWhite,
-                    filled: true,
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 26.0, horizontal: 18.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.r),
-                      borderSide:
-                          const BorderSide(color: Colors.transparent, width: 0),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.r),
-                      borderSide:
-                          const BorderSide(color: Colors.transparent, width: 0),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      gapPadding: 0.0,
-                      borderRadius: BorderRadius.circular(8.r),
-                      borderSide:
-                          const BorderSide(color: Colors.transparent, width: 0),
-                    ),
-                  ),
-                )
+                Text("login button section"),
               ],
             )
           ],
         ),
       ),
     ));
+  }
+}
+
+class _emailAndPasswordSection extends StatelessWidget {
+  const _emailAndPasswordSection({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Email:",
+          style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700),
+        ),
+        TextField(
+          decoration: InputDecoration(
+            hintText: "example@gmail.com",
+            fillColor: ColorIs.almostWhite,
+            filled: true,
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 26.0, horizontal: 18.0),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: const BorderSide(color: Colors.transparent, width: 0),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: const BorderSide(color: Colors.transparent, width: 0),
+            ),
+            focusedBorder: OutlineInputBorder(
+              gapPadding: 0.0,
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: const BorderSide(color: Colors.transparent, width: 0),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 24.h,
+        ),
+        Text(
+          "Password:",
+          style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700),
+        ),
+        TextField(
+          obscureText: true,
+          obscuringCharacter: "*",
+          decoration: InputDecoration(
+            hintText: "********",
+            fillColor: ColorIs.almostWhite,
+            filled: true,
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 26.0, horizontal: 18.0),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: const BorderSide(color: Colors.transparent, width: 0),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: const BorderSide(color: Colors.transparent, width: 0),
+            ),
+            focusedBorder: OutlineInputBorder(
+              gapPadding: 0.0,
+              borderRadius: BorderRadius.circular(8.r),
+              borderSide: const BorderSide(color: Colors.transparent, width: 0),
+            ),
+          ),
+        )
+      ],
+    );
   }
 }
 
