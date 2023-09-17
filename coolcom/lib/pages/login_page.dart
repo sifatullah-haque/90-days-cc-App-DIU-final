@@ -22,7 +22,50 @@ class LoginPage extends StatelessWidget {
             _emailAndPasswordSection(),
             Column(
               children: [
-                Text("login button section"),
+                SizedBox(
+                  height: 24.h,
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  height: 56.h,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: ColorIs.kindaBlack,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40.r)),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 24.h,
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  height: 56.h,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: ColorIs.itsGray,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40.r)),
+                    ),
+                  ),
+                )
               ],
             )
           ],
