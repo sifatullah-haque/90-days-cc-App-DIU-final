@@ -14,61 +14,64 @@ class LoginPage extends StatelessWidget {
         body: SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 5.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const _AppBarSection(),
-            const _logoSection(),
-            _emailAndPasswordSection(),
-            Column(
-              children: [
-                SizedBox(
-                  height: 24.h,
-                ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 56.h,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const _AppBarSection(),
+              const _logoSection(),
+              _emailAndPasswordSection(),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 24.h,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 56.h,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: ColorIs.kindaBlack,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40.r)),
                       ),
                     ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorIs.kindaBlack,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.r)),
-                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 24.h,
-                ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 56.h,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Sign Up",
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: 24.h,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 56.h,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Sign Up",
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: ColorIs.itsGray,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40.r)),
                       ),
                     ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorIs.itsGray,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.r)),
-                    ),
-                  ),
-                )
-              ],
-            )
-          ],
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     ));
