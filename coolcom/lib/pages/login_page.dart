@@ -22,54 +22,6 @@ class LoginPage extends StatelessWidget {
               const _AppBarSection(),
               const _logoSection(),
               _emailAndPasswordSection(),
-              Column(
-                children: [
-                  SizedBox(
-                    height: 24.h,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 56.h,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: ColorIs.kindaBlack,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40.r)),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 24.h,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 56.h,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Sign Up",
-                        style: TextStyle(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: ColorIs.itsGray,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40.r)),
-                      ),
-                    ),
-                  )
-                ],
-              )
             ],
           ),
         ),
@@ -79,7 +31,10 @@ class LoginPage extends StatelessWidget {
 }
 
 class _emailAndPasswordSection extends StatelessWidget {
-  const _emailAndPasswordSection({
+  final TextEditingController EmailEditingController = TextEditingController();
+  final TextEditingController PasswordEditingController =
+      TextEditingController();
+  _emailAndPasswordSection({
     super.key,
   });
 
@@ -93,6 +48,7 @@ class _emailAndPasswordSection extends StatelessWidget {
           style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700),
         ),
         TextField(
+          controller: EmailEditingController,
           decoration: InputDecoration(
             hintText: "example@gmail.com",
             fillColor: ColorIs.almostWhite,
@@ -122,6 +78,7 @@ class _emailAndPasswordSection extends StatelessWidget {
           style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700),
         ),
         TextField(
+          controller: PasswordEditingController,
           obscureText: true,
           obscuringCharacter: "*",
           decoration: InputDecoration(
@@ -144,6 +101,58 @@ class _emailAndPasswordSection extends StatelessWidget {
               borderSide: const BorderSide(color: Colors.transparent, width: 0),
             ),
           ),
+        ),
+        Column(
+          children: [
+            SizedBox(
+              height: 24.h,
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: 56.h,
+              child: ElevatedButton(
+                onPressed: () {
+                  String email = EmailEditingController.text;
+                  String password = PasswordEditingController.text;
+                  print("This is email $email and this is pass $password");
+                },
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: ColorIs.kindaBlack,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40.r)),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 24.h,
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: 56.h,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: ColorIs.itsGray,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40.r)),
+                ),
+              ),
+            )
+          ],
         )
       ],
     );
