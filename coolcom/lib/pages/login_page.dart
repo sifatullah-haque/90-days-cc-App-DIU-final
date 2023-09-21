@@ -74,7 +74,7 @@ class _emailAndPasswordSection extends StatelessWidget {
           height: 24.h,
         ),
         Text(
-          "Password:",
+          "your Password:",
           style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700),
         ),
         TextField(
@@ -111,11 +111,7 @@ class _emailAndPasswordSection extends StatelessWidget {
               width: double.infinity,
               height: 56.h,
               child: ElevatedButton(
-                onPressed: () {
-                  String email = EmailEditingController.text;
-                  String password = PasswordEditingController.text;
-                  print("This is email $email and this is pass $password");
-                },
+                onPressed: () {},
                 child: Text(
                   "Login",
                   style: TextStyle(
