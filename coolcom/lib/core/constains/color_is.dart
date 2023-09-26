@@ -5,4 +5,5 @@ abstract class ColorIs {
   static const kindaBlack = Color(0xff292526);
   static const itsGray = Color(0xffA4AAAD);
   static const itsWhite = Color(0xffffffff);
+  static const itsBlack = Color(0xff000000);
 }
